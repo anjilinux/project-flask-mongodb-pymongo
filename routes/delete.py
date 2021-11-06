@@ -8,4 +8,4 @@ deletedata = Blueprint("deletedata",__name__)
 @deletedata.route("/delete/<string:id>",methods=["DELETE"])
 def add(id):
 	query = mongo.db.colpizza.delete_one({"_id":ObjectId(id)})
-	return "success delete id : " + id
+	return "success fully delete id : " + id
